@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "identity_key": "team_id",
+  "clubs": [
+    {"team_id": 99999999, "official_name": "Charlton BR", "active": false, "aliases": ["Charlton BR"], "source": "historical_project_records"},
+    {"team_id": 10000010, "official_name": "Titiham", "active": true, "aliases": ["Titiham", "Titiham Headspurs"], "source": "current_catalog_and_historical_alias"}
+  ]
+}

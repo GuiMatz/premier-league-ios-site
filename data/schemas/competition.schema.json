@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.local/schemas/competition.schema.json",
+  "title": "Catálogo estrutural de competições",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "catalog_id", "competitions"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "catalog_id": {"const": "pl-ios-competitions"},
+    "competitions": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/competition"}}
+  },
+  "$defs": {
+    "competition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["competition_id", "official_name", "short_name", "format", "theme", "seasons", "rules"],
+      "properties": {
+        "competition_id": {"enum": ["pl-ios", "pc1", "pc2", "copa-ios", "iwc", "icwc"]},
+        "official_name": {"type": "string", "minLength": 1},
+        "short_name": {"type": "string", "minLength": 1},
+        "format": {"enum": ["cartola_points_league", "head_to_head_league", "knockout", "ranking_points"]},
+        "theme": {"type": "object", "additionalProperties": false, "required": ["primary", "secondary"], "properties": {"primary": {"enum": ["navy", "green", "gold", "red"]}, "secondary": {"enum": ["white", "gold", "golden_orange", "black"]}}},
+        "seasons": {"type": "array", "minItems": 1, "items": {"$ref": "season.schema.json"}},
+        "rules": {"type": "object", "additionalProperties": false, "properties": {"ranking_metric": {"enum": ["cartola_accumulated_points", "competition_points"]}, "win_points": {"type": "integer"}, "draw_points": {"type": "integer"}, "loss_points": {"type": "integer"}, "tiebreakers": {"type": ["array", "null"], "items": {"type": "string"}}, "ordering": {"const": "preserve_official_source_order"}, "phases": {"type": "array", "items": {"enum": ["quarterfinal", "semifinal", "third_place", "final"]}, "uniqueItems": true}}}
+      }
+    }
+  }
+}

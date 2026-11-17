@@ -1,0 +1,19 @@
+{
+  "name": "premier-league-ios-site",
+  "version": "4.1.0",
+  "description": "Site da Premier League IOS, liga de amigos no Cartola FC: parciais ao vivo, escalações, palpites, estatísticas e história.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/preview-server.mjs",
+    "dev": "vercel dev",
+    "check": "node scripts/check.mjs && node scripts/state-test.mjs && node scripts/smoke.mjs",
+    "test": "node scripts/run-tests.mjs",
+    "test:phase-3k2": "node scripts/phase-3k2-test.mjs",
+    "smoke:preview": "node scripts/phase-3k-smoke.mjs",
+    "deploy:preview": "vercel deploy",
+    "deploy": "node -e \"throw new Error('PRODUCTION_DEPLOY_FORBIDDEN_DURING_PHASE_3K')\""
+  },
+  "dependencies": {}
+}

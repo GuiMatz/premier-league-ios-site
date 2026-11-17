@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.example/schemas/checkpoint.schema.json",
+  "title": "Checkpoint da máquina de estados de uma rodada",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "environment",
+    "writer",
+    "season",
+    "cartola_round",
+    "round_state",
+    "updated_at",
+    "processed_event_ids"
+  ],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "environment": {
+      "type": "string",
+      "enum": ["development", "shadow", "production"]
+    },
+    "writer": {"type": "string", "enum": ["bot", "site"]},
+    "season": {"type": "integer", "minimum": 2023, "maximum": 9999},
+    "cartola_round": {"type": "integer", "minimum": 0, "maximum": 99},
+    "round_state": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "market_open",
+        "lock_pending",
+        "locked",
+        "live",
+        "final_pending",
+        "finalized",
+        "recovery_required"
+      ]
+    },
+    "market": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["status", "observed_at"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["open", "closed", "maintenance", "unavailable", "unknown"]
+        },
+        "closes_at": {"type": ["string", "null"], "format": "date-time"},
+        "observed_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "last_successful_event_id": {"type": ["string", "null"]},
+    "processed_event_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "recovery": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["required", "reason"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "reason": {"type": ["string", "null"]},
+        "from_round": {"type": ["integer", "null"], "minimum": 1},
+        "to_round": {"type": ["integer", "null"], "minimum": 1}
+      }
+    },
+    "updated_at": {"type": "string", "format": "date-time"}
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.example/schemas/cartola-snapshot.schema.json",
+  "title": "Snapshot normalizado de entrada Cartola",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "fetched_at", "cartola_round", "market_status", "market_signal", "clubs", "source_errors"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "fetched_at": {"type": ["string", "null"], "format": "date-time"},
+    "cartola_round": {"type": ["integer", "null"], "minimum": 1, "maximum": 38},
+    "market_status": {"enum": ["market_open", "market_closed", "round_live", "round_final", "unavailable", "partial"]},
+    "market_signal": {"enum": ["explicit_round_status", "cartola_market_status", "unavailable"]},
+    "clubs": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["team_id", "cartola_team_id", "round_score", "championship_score", "budget", "lineup", "captain_id", "luxury_reserve", "lineup_round_id", "scaled", "data_status"],
+        "properties": {
+          "team_id": {"type": ["integer", "null"]}, "cartola_team_id": {"type": ["integer", "null"]},
+          "round_score": {"type": ["number", "null"]}, "championship_score": {"type": ["number", "null"]},
+          "budget": {"type": ["number", "null"]}, "lineup": {"type": ["object", "null"]},
+          "captain_id": {"type": ["integer", "null"]}, "luxury_reserve": {"type": ["object", "null"]},
+          "lineup_round_id": {"type": ["integer", "null"]}, "scaled": {"type": ["boolean", "null"]},
+          "data_status": {"enum": ["available", "unavailable"]}
+        }
+      }
+    },
+    "source_errors": {"type": "array", "items": {"type": "object"}}
+  }
+}

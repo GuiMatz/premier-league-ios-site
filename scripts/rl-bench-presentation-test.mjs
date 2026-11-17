@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=file=>fs.readFileSync(new URL(`../${file}`,import.meta.url),'utf8');
+const ui=read('assets/js/app/lineups.js'),html=read('escalacoes.html'),projection=read('assets/js/app/lineup-projection.js');
+assert.doesNotMatch(html,/class="reserve-card"|data-od-id="luxury-reserve"/);
+assert.doesNotMatch(ui,/reserveCard|reserveName|reserveInitials|reserveMeta|reserveScore|reserveLabel/);
+assert.match(ui,/reserve\.isLuxuryReserve\?`<span class="luxury-reserve-mark/);assert.match(ui,/aria-label="Reserva de Luxo"/);assert.match(ui,/title="Reserva de Luxo"/);
+assert.match(ui,/is-luxury-reserve/);assert.match(ui,/projection\.luxuryReserve\.triggered/);assert.match(html,/\.luxury-reserve-mark\{/);assert.match(html,/color:oklch\(\.72 \.17 55\)/);assert.match(html,/stroke:currentColor/);
+assert.match(projection,/isLuxuryReserve:Number\(athlete\.athlete_id\)===Number\(lineup\.luxury_reserve\?\.athlete_id\)/);
+assert.match(projection,/lineupInherited:lineup\.lineup_inherited===true/);
+console.log('RL_SEPARATE_BLOCK_REMOVED=YES');console.log('RL_INSIDE_BENCH_READY=YES');console.log('RL_ORANGE_ARROWS_READY=YES');console.log('RL_NOT_DUPLICATED=YES');console.log('RL_TOOLTIP_READY=YES');

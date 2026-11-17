@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-24T12:00:00Z",
+  "scenarios": [
+    {"id":"A","description":"mercado aberto e atualizado","expected":"UP_TO_DATE","cartola":{"cartola_round":24,"market_status":"market_open"}},
+    {"id":"B","description":"mercado fechado sem lineup","expected":"NEEDS_LINEUP_CAPTURE","cartola":{"cartola_round":24,"market_status":"market_closed","market_close_at":"2026-08-24T13:00:00Z"}},
+    {"id":"C","description":"mercado fechado com 10 lineups","expected":"WAITING_FOR_LIVE","cartola":{"cartola_round":24,"market_status":"market_closed"},"lineups":{"24":{"complete":true}}},
+    {"id":"D","description":"rodada ao vivo","expected":"ROUND_LIVE","cartola":{"cartola_round":24,"market_status":"round_live"},"lineups":{"24":{"complete":true}},"shadow":{"24":{"available":true,"complete":true,"live_complete":true}}},
+    {"id":"E","description":"scores completos aguardando sinal final","expected":"WAITING_FOR_FINAL","cartola":{"cartola_round":24,"market_status":"market_closed","scores_status":"complete"},"lineups":{"24":{"complete":true}}},
+    {"id":"F","description":"rodada anterior finalizável","expected":"NEEDS_ROUND_FINALIZE","cartola":{"cartola_round":25,"market_status":"market_open","finalized_rounds":[24]},"lineups":{"24":{"complete":true}},"shadow":{"24":{"available":true,"complete":true,"finalized":true,"official_scores_available":true}}},
+    {"id":"G","description":"transaction recovery required","expected":"RECOVERY_REQUIRED","transactions":[{"transaction_id":"tx-1","classification":"COMPLETE_COMMIT"}]},
+    {"id":"H","description":"integrity failed","expected":"INTEGRITY_FAILED","integrity":{"status":"ERROR","issues":[{"code":"LEDGER_INVALID"}]}},
+    {"id":"I","description":"Cartola indisponível","expected":"API_UNAVAILABLE","cartola":{"available":false}},
+    {"id":"J","description":"fechamento perdido recuperável","expected":"MISSED_MARKET_CLOSE","cartola":{"cartola_round":24,"market_status":"market_closed","market_close_at":"2026-08-24T10:00:00Z"},"lineups":{"24":{"complete":false,"endpoint_available":true,"lineup_round_id":24}}},
+    {"id":"K","description":"fechamento perdido irrecuperável","expected":"MISSED_MARKET_CLOSE","cartola":{"cartola_round":24,"market_status":"market_closed","market_close_at":"2026-08-24T10:00:00Z"},"lineups":{"24":{"complete":false,"endpoint_available":true,"lineup_round_id":25}}},
+    {"id":"L","description":"duas rodadas à frente","expected":"NEEDS_ROUND_FINALIZE","last_processed_round":22,"cartola":{"cartola_round":25,"market_status":"market_open","finalized_rounds":[23,24]},"lineups":{"23":{"complete":true},"24":{"complete":true}},"shadow":{"23":{"finalized":true,"official_scores_available":true},"24":{"finalized":true,"official_scores_available":true}}},
+    {"id":"M","description":"storage conflict","expected":"WRITER_CONFLICT","storage_conflict":true},
+    {"id":"N","description":"rate limit","retry_code":"RATE_LIMIT","expected_retry":"RETRY_LATER"}
+  ]
+}

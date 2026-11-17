@@ -1,0 +1,32 @@
+# Segredos e variáveis de ambiente
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials/
+credentials*.json
+
+# Vercel (contém IDs do projeto e da organização)
+.vercel/
+
+# Dependências e artefatos gerados
+node_modules/
+tmp/
+reports/
+quarantine/
+.quarantine/
+
+# Logs e temporários
+*.log
+*.tmp
+*.temp
+*.bak
+npm-debug.log*
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "transaction_id": "2099-1-cas-winner-cas-real-1786743194279",
+  "season": 2099,
+  "cartola_round": 1,
+  "operation": "cas-winner",
+  "status": "committed",
+  "created_at": "2026-08-14T21:33:14.594Z",
+  "committed_at": "2026-08-14T21:33:14.594Z",
+  "writes": [
+    {
+      "target": "lab-tests/cas-real-1786743194279/winner.json",
+      "content_hash": "86dfad333dcce73bd556ed44ec2a2c1841be0b3dfbf969552514c0fde608bb87",
+      "committed": true
+    },
+    {
+      "target": "lab-tests/cas-real-1786743194279/winner-checkpoint.json",
+      "content_hash": "eef9b89e5cc68eedb6b6829f29cf258b912dbaa4ef11548bbf51dbbe1573c149",
+      "committed": true
+    }
+  ],
+  "metadata": {
+    "transaction_id": "2099-1-cas-winner-cas-real-1786743194279"
+  },
+  "execution_context": null,
+  "expected_version": "eb9d231c706749eb9e5b16d7ce849bdda15ffd7b"
+}

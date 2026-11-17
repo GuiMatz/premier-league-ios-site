@@ -1,0 +1,1388 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-13T04:55:17.904241+00:00",
+  "seasons": {
+    "2026": {
+      "teams": {
+        "10000009": "Paris Saint Zuis",
+        "10000007": "Easy Money Sn1per",
+        "10000002": "INTER DE BIGÃO",
+        "10000001": "Shaktar Meminetsk",
+        "10000006": "Rafalovers FC",
+        "10000004": "Rafa Casablanca Athletic",
+        "10000003": "ValeGuiDoce Esporte Clube",
+        "10000008": "Grishatasaray",
+        "10000010": "Titiham",
+        "10000005": "Manteto United FC"
+      },
+      "cartola_rounds": {
+        "1": {
+          "scores": {
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 54.06
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 64.76
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 70.46
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 44.86
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 57.8
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 50.15
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 35.17
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 61.55
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 57.1
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 60.06
+            }
+          },
+          "mvp_team_id": 10000009,
+          "mvp_points": 70.46,
+          "merda_team_id": 10000010,
+          "merda_points": 35.17,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.346776+00:00"
+        },
+        "2": {
+          "scores": {
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 84.38
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 108.0
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 77.1
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 80.21
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 58.95
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 87.99
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 54.9
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 73.13
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 59.1
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 74.4
+            }
+          },
+          "mvp_team_id": 10000007,
+          "mvp_points": 108.0,
+          "merda_team_id": 10000006,
+          "merda_points": 54.9,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.346860+00:00"
+        },
+        "3": {
+          "scores": {
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 91.94
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 102.46
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 91.64
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 60.6
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 77.34
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 86.84
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 88.31
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 93.04
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 71.73
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 83.45
+            }
+          },
+          "mvp_team_id": 10000004,
+          "mvp_points": 102.46,
+          "merda_team_id": 10000010,
+          "merda_points": 60.6,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.346911+00:00"
+        },
+        "4": {
+          "scores": {
+            "10000010": {
+              "name": "Titiham",
+              "points": 55.71
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 27.55
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 68.49
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 57.78
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 62.48
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 56.14
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 79.48
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 47.35
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 81.0
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 87.33
+            }
+          },
+          "mvp_team_id": 10000006,
+          "mvp_points": 87.33,
+          "merda_team_id": 10000004,
+          "merda_points": 27.55,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.346957+00:00"
+        },
+        "5": {
+          "scores": {
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 84.72
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 74.42
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 88.72
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 104.12
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 76.65
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 46.62
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 85.71
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 61.22
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 90.4
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 57.63
+            }
+          },
+          "mvp_team_id": 10000003,
+          "mvp_points": 104.12,
+          "merda_team_id": 10000010,
+          "merda_points": 46.62,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.347982+00:00"
+        },
+        "6": {
+          "scores": {
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 67.09
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 67.01
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 59.71
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 43.76
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 73.7
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 78.46
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 28.54
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 63.45
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 70.6
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 59.01
+            }
+          },
+          "mvp_team_id": 10000005,
+          "mvp_points": 78.46,
+          "merda_team_id": 10000010,
+          "merda_points": 28.54,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.348304+00:00"
+        },
+        "7": {
+          "scores": {
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 70.86
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 60.26
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 88.87
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 55.58
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 69.17
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 67.17
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 68.07
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 70.22
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 57.21
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 83.87
+            }
+          },
+          "mvp_team_id": 10000006,
+          "mvp_points": 88.87,
+          "merda_team_id": 10000008,
+          "merda_points": 55.58,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.348527+00:00"
+        },
+        "8": {
+          "scores": {
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 82.25
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 39.79
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 44.68
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 39.97
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 57.1
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 73.02
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 80.85
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 80.95
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 45.58
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 81.15
+            }
+          },
+          "mvp_team_id": 10000001,
+          "mvp_points": 82.25,
+          "merda_team_id": 10000008,
+          "merda_points": 39.79,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.348790+00:00"
+        },
+        "9": {
+          "scores": {
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 88.38
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 76.98
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 80.76
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 42.73
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 79.23
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 64.77
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 55.36
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 72.51
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 81.88
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 80.46
+            }
+          },
+          "mvp_team_id": 10000009,
+          "mvp_points": 88.38,
+          "merda_team_id": 10000006,
+          "merda_points": 42.73,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.348985+00:00"
+        },
+        "10": {
+          "scores": {
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 64.45
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 49.97
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 47.59
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 51.65
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 53.08
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 50.75
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 52.57
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 36.43
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 65.79
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 39.45
+            }
+          },
+          "mvp_team_id": 10000003,
+          "mvp_points": 65.79,
+          "merda_team_id": 10000010,
+          "merda_points": 36.43,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349135+00:00"
+        },
+        "11": {
+          "scores": {
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 91.78
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 101.96
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 102.96
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 92.46
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 62.96
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 35.26
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 90.26
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 17.98
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 70.86
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 58.29
+            }
+          },
+          "mvp_team_id": 10000001,
+          "mvp_points": 102.96,
+          "merda_team_id": 10000006,
+          "merda_points": 17.98,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349180+00:00"
+        },
+        "12": {
+          "scores": {
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 73.06
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 73.5
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 55.1
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 83.0
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 69.65
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 84.85
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 46.75
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 25.03
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 80.05
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 48.89
+            }
+          },
+          "mvp_team_id": 10000003,
+          "mvp_points": 84.85,
+          "merda_team_id": 10000008,
+          "merda_points": 25.03,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349220+00:00"
+        },
+        "13": {
+          "scores": {
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 111.44
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 59.9
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 111.39
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 101.64
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 60.39
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 79.64
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 113.69
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 94.28
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 68.31
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 98.94
+            }
+          },
+          "mvp_team_id": 10000001,
+          "mvp_points": 113.69,
+          "merda_team_id": 10000010,
+          "merda_points": 59.9,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349413+00:00"
+        },
+        "14": {
+          "scores": {
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 56.08
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 40.35
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 46.45
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 31.52
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 56.24
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 57.15
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 32.31
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 54.57
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 72.18
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 49.75
+            }
+          },
+          "mvp_team_id": 10000001,
+          "mvp_points": 72.18,
+          "merda_team_id": 10000008,
+          "merda_points": 31.52,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349503+00:00"
+        },
+        "15": {
+          "scores": {
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 56.25
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 41.53
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 38.92
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 48.15
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 59.22
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 56.28
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 51.57
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 46.5
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 46.77
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 59.52
+            }
+          },
+          "mvp_team_id": 10000007,
+          "mvp_points": 59.52,
+          "merda_team_id": 10000005,
+          "merda_points": 38.92,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349649+00:00"
+        },
+        "16": {
+          "scores": {
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 48.01
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 77.54
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 34.57
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 70.18
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 68.34
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 63.66
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 39.2
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 72.09
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 101.85
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 71.24
+            }
+          },
+          "mvp_team_id": 10000007,
+          "mvp_points": 101.85,
+          "merda_team_id": 10000008,
+          "merda_points": 34.57,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349751+00:00"
+        },
+        "17": {
+          "scores": {
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 32.75
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 48.6
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 88.41
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 73.75
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 51.35
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 81.42
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 58.32
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 54.62
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 74.72
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 43.3
+            }
+          },
+          "mvp_team_id": 10000005,
+          "mvp_points": 88.41,
+          "merda_team_id": 10000004,
+          "merda_points": 32.75,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349790+00:00"
+        },
+        "18": {
+          "scores": {
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 110.4
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 73.35
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 43.6
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 111.1
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 122.45
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 128.3
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 96.5
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 51.95
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 100.77
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 120.6
+            }
+          },
+          "mvp_team_id": 10000007,
+          "mvp_points": 128.3,
+          "merda_team_id": 10000006,
+          "merda_points": 43.6,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/1 2026"
+          ],
+          "source": "migração PC/1 2026",
+          "processed_at": "2026-08-13T04:55:14.349826+00:00"
+        },
+        "19": {
+          "scores": {
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 110.88
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 103.98
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 107.68
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 86.7
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 115.68
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 59.4
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 74.17
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 128.58
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 55.5
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 125.38
+            }
+          },
+          "mvp_team_id": 10000003,
+          "mvp_points": 128.58,
+          "merda_team_id": 10000006,
+          "merda_points": 55.5,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/2 2026",
+            "Copa IOS 2026"
+          ],
+          "source": "migração PC/2 2026",
+          "processed_at": "2026-08-13T04:55:14.349931+00:00"
+        },
+        "20": {
+          "scores": {
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 48.53
+            },
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 117.41
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 56.18
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 48.63
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 91.71
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 100.52
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 123.35
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 73.63
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 40.38
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 43.08
+            }
+          },
+          "mvp_team_id": 10000002,
+          "mvp_points": 123.35,
+          "merda_team_id": 10000008,
+          "merda_points": 40.38,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/2 2026",
+            "Copa IOS 2026"
+          ],
+          "source": "migração PC/2 2026",
+          "processed_at": "2026-08-13T04:55:14.350036+00:00"
+        },
+        "21": {
+          "scores": {
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 81.95
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 58.41
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 80.36
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 80.9
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 40.36
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 79.55
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 72.54
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 79.05
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 64.6
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 37.75
+            }
+          },
+          "mvp_team_id": 10000001,
+          "mvp_points": 81.95,
+          "merda_team_id": 10000002,
+          "merda_points": 37.75,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/2 2026",
+            "Copa IOS 2026"
+          ],
+          "source": "migração PC/2 2026",
+          "processed_at": "2026-08-13T04:55:14.350100+00:00"
+        },
+        "22": {
+          "scores": {
+            "10000001": {
+              "name": "Shaktar Meminetsk",
+              "points": 77.21
+            },
+            "10000003": {
+              "name": "ValeGuiDoce Esporte Clube",
+              "points": 63.01
+            },
+            "10000006": {
+              "name": "Rafalovers FC",
+              "points": 54.24
+            },
+            "10000010": {
+              "name": "Titiham",
+              "points": 57.45
+            },
+            "10000009": {
+              "name": "Paris Saint Zuis",
+              "points": 49.95
+            },
+            "10000004": {
+              "name": "Rafa Casablanca Athletic",
+              "points": 64.61
+            },
+            "10000005": {
+              "name": "Manteto United FC",
+              "points": 76.05
+            },
+            "10000008": {
+              "name": "Grishatasaray",
+              "points": 37.19
+            },
+            "10000007": {
+              "name": "Easy Money Sn1per",
+              "points": 76.36
+            },
+            "10000002": {
+              "name": "INTER DE BIGÃO",
+              "points": 51.6
+            }
+          },
+          "mvp_team_id": 10000001,
+          "mvp_points": 77.21,
+          "merda_team_id": 10000008,
+          "merda_points": 37.19,
+          "competitions": [
+            "Premier League IOS 2026",
+            "PC/2 2026"
+          ],
+          "source": "migração PC/2 2026",
+          "processed_at": "2026-08-13T04:55:14.350143+00:00"
+        }
+      },
+      "special_scores": [
+        {
+          "team_id": 10000001,
+          "name": "Meminetsk",
+          "points": 145.0,
+          "round": "1",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000009,
+          "name": "Paris Saint Zuis",
+          "points": 145.0,
+          "round": "2",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000009,
+          "name": "Paris Saint Zuis",
+          "points": 141.0,
+          "round": "4",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000009,
+          "name": "Paris Saint Zuis",
+          "points": 137.0,
+          "round": "1",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000002,
+          "name": "Inter de Bigão",
+          "points": 137.0,
+          "round": "1",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000006,
+          "name": "RafaLovers",
+          "points": 135.0,
+          "round": "2",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000007,
+          "name": "Easy Money",
+          "points": 133.0,
+          "round": "1",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000001,
+          "name": "Meminetsk",
+          "points": 131.0,
+          "round": "3",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000004,
+          "name": "Rafa Casablanca",
+          "points": 129.0,
+          "round": "1",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000001,
+          "name": "Meminetsk",
+          "points": 127.0,
+          "round": "4",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000004,
+          "name": "Rafa Casablanca",
+          "points": 127.0,
+          "round": "5",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000005,
+          "name": "Manteto",
+          "points": 126.0,
+          "round": "2",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000007,
+          "name": "Easy Money",
+          "points": 126.0,
+          "round": "2",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000005,
+          "name": "Manteto",
+          "points": 126.0,
+          "round": "4",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000002,
+          "name": "Inter de Bigão",
+          "points": 124.0,
+          "round": "4",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000003,
+          "name": "ValeGuiDoce",
+          "points": 121.0,
+          "round": "2",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000007,
+          "name": "Easy Money",
+          "points": 120.0,
+          "round": "4",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        },
+        {
+          "team_id": 10000006,
+          "name": "RafaLovers",
+          "points": 120.0,
+          "round": "6",
+          "competition": "IWC",
+          "source": "base IWC 2026"
+        }
+      ]
+    }
+  },
+  "legacy_records": [
+    {
+      "team_id": 10000003,
+      "name": "ValeGuiDoce Esporte Clube",
+      "points": 194.0,
+      "round": "24",
+      "year": 2025,
+      "competition": "PC/2",
+      "source": "recorde histórico conhecido"
+    },
+    {
+      "team_id": 10000001,
+      "name": "Shaktar Meminetsk",
+      "points": 170.0,
+      "round": "24",
+      "year": 2025,
+      "competition": "PC/2",
+      "source": "recorde histórico conhecido"
+    },
+    {
+      "team_id": 10000002,
+      "name": "INTER DE BIGÃO",
+      "points": 168.0,
+      "round": "24",
+      "year": 2025,
+      "competition": "PC/2",
+      "source": "recorde histórico conhecido"
+    }
+  ]
+}

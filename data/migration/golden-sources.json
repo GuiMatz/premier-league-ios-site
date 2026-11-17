@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "season": 2026,
+  "generated_for": "phase-3c-reconciliation",
+  "domains": {
+    "pl_standings": {"source":"data/historico_rodadas.json#seasons.2026.cartola_rounds","coverage":"Cartola R01-R22 disponível","status":"partial","confidence":"high","notes":"Somar somente OFFICIAL_ROUND_SCORE; temporada ainda em andamento."},
+    "pc1_standings": {"source":"assets/js/legacy-data/history.js#PC_ARCHIVE.PC/1 2026.rows","coverage":"classificação final consolidada, 18 rodadas","status":"consolidated_only","confidence":"official","notes":"A classificação consolidada prevalece; o adaptador de partidas do site expõe somente 10 rodadas e não pode recalculá-la."},
+    "pc2_standings": {"source":"data/state_public.json#pc2_resultados","coverage":"PC/2 R01-R05","status":"partial","confidence":"high","notes":"Competição em andamento; partidas publicadas são reproduzíveis."},
+    "round_scores": {"source":"data/historico_rodadas.json#seasons.2026.cartola_rounds","coverage":"Cartola R01-R22","status":"partial","confidence":"official","notes":"Cada rodada registrada contém os 10 clubes e procedência própria."},
+    "awards": {"source":"data/historico_rodadas.json#seasons.2026.cartola_rounds.*.mvp_team_id/merda_team_id","coverage":"Cartola R01-R22","status":"partial","confidence":"official","notes":"Empates exigem LEGACY_COMPATIBILITY_ORDER somente para paridade com o BOT."},
+    "records": {"source":"data/historico_rodadas.json#seasons.2026.cartola_rounds+special_scores","coverage":"rodadas Cartola registradas e base IWC 2026","status":"partial","confidence":"high","notes":"OFFICIAL_ROUND_SCORE e SPECIAL_SCORE são elegíveis; 145 possui dois co-recordistas."},
+    "titles": {"source":"assets/js/legacy-data/history.js#PC_ARCHIVE e data/state_public.json#conquistas","coverage":"títulos consolidados até o estado atual","status":"consolidated_only","confidence":"official","notes":"Cartoleiro de Ouro permanece honraria, não título."}
+  }
+}

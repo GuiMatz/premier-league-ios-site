@@ -1,0 +1,86 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {deriveRoundContext,completedRounds,deriveLeagueStatistics,computeHeadToHead,plStandings,selectedRoundSummary,mergeCompletedRoundBackfill,projectPc2Backfill,allScoreRecords,clubStatistics} from '../assets/js/app/data-store.js';
+
+const state=JSON.parse(fs.readFileSync(new URL('../data/state_public.json',import.meta.url),'utf8'));
+const clubs=JSON.parse(fs.readFileSync(new URL('../data/catalog/clubs.json',import.meta.url),'utf8')).clubs;
+const ids=clubs.map(club=>Number(club.team_id));
+const fixtures=state.pc2_confrontos['6'];
+const scores=Object.fromEntries(ids.map((id,index)=>[id,70+index]));
+const results=fixtures.map(([a,b])=>[a,scores[a],b,scores[b]]);
+const historyDoc={seasons:{'2026':{cartola_rounds:{'24':{status:'final',source:'cartola_team_official',scores}}}}};
+const store={clubs,stateDoc:state,historyDoc,historicalRounds:historyDoc.seasons['2026'].cartola_rounds,importedRounds:{},pc1Fixtures:{},pc1Results:{},pc2Fixtures:state.pc2_confrontos,pc2Results:{6:results},currentCartolaRound:25,roundContext:deriveRoundContext({market:{round:25,isOpen:true},completedRoundNumbers:[24],hasLiveScores:false}),live:{}};
+
+assert.deepEqual(store.roundContext,{cartolaRound:25,marketStatus:'open',predictionRound:25,latestCompletedRound:24,liveRound:null,hasLiveScores:false});
+assert.equal(selectedRoundSummary(store,24).status,'final');
+assert.notEqual(selectedRoundSummary(store,24).status,'partial');
+assert.equal(completedRounds(store).filter(round=>round.round===24).length,1);
+assert.equal(computeHeadToHead(clubs,{6:results}).every(row=>row.played===1),true);
+assert.equal(plStandings(clubs,{24:scores}).length,10);
+const once=deriveLeagueStatistics(store),twice=deriveLeagueStatistics(store);
+assert.deepEqual(twice,once);
+assert.equal(once.appliedRoundIds.filter(id=>id==='2026:24').length,1);
+
+const imports=JSON.parse(fs.readFileSync(new URL('../data/historical-imports.json',import.meta.url),'utf8'));
+const official=round=>({season:2026,round,official:true,trusted:true,source:'cartola_team_official',scores:Object.fromEntries(ids.map((id,index)=>[id,60+((index+round)%10)*3+round/100]))});
+const r24=official(24),r25=official(25),r26=official(26);
+let sequentialHistory={seasons:{'2026':{cartola_rounds:{'23':{scores:imports.rounds['23'].scores,source:'historical_import'}}}}};
+sequentialHistory=mergeCompletedRoundBackfill(sequentialHistory,[r24]);
+assert.deepEqual(Object.keys(sequentialHistory.seasons['2026'].cartola_rounds).map(Number).sort((a,b)=>a-b),[23,24]);
+sequentialHistory=mergeCompletedRoundBackfill(sequentialHistory,[r24,r25]);
+assert.deepEqual(Object.keys(sequentialHistory.seasons['2026'].cartola_rounds).map(Number).sort((a,b)=>a-b),[23,24,25]);
+sequentialHistory=mergeCompletedRoundBackfill(sequentialHistory,[r24,r25,r26]);
+assert.deepEqual(Object.keys(sequentialHistory.seasons['2026'].cartola_rounds).map(Number).sort((a,b)=>a-b),[23,24,25,26]);
+
+const projectedResults={...state.pc2_resultados,5:imports.rounds['23'].matches,...projectPc2Backfill(state.pc2_confrontos,[r24,r25,r26])};
+const sequentialStore={...store,historyDoc:sequentialHistory,historicalRounds:sequentialHistory.seasons['2026'].cartola_rounds,pc2Results:projectedResults,currentCartolaRound:27,roundContext:deriveRoundContext({market:{round:27,isOpen:true},completedRoundNumbers:[23,24,25,26]})};
+const finalRounds=completedRounds(sequentialStore);
+assert.deepEqual(finalRounds.filter(item=>item.round>=24).map(item=>item.round),[24,25,26]);
+assert.equal(new Set(finalRounds.map(item=>item.id)).size,finalRounds.length);
+assert.equal(computeHeadToHead(clubs,Object.fromEntries(Object.entries(projectedResults).filter(([round])=>Number(round)<=7))).every(row=>row.played===7),true);
+const sequentialStats=deriveLeagueStatistics(sequentialStore),sequentialStatsAgain=deriveLeagueStatistics(sequentialStore);
+assert.deepEqual(sequentialStatsAgain,sequentialStats);
+assert.equal(sequentialStats.appliedRoundIds.filter(id=>['2026:24','2026:25','2026:26'].includes(id)).length,3);
+const storeThrough24={...sequentialStore,historyDoc:mergeCompletedRoundBackfill({seasons:{'2026':{cartola_rounds:{'23':{scores:imports.rounds['23'].scores}}}}},[r24]),pc2Results:{...state.pc2_resultados,5:imports.rounds['23'].matches,...projectPc2Backfill(state.pc2_confrontos,[r24])}};
+storeThrough24.historicalRounds=storeThrough24.historyDoc.seasons['2026'].cartola_rounds;
+const storeThrough25={...sequentialStore,historyDoc:mergeCompletedRoundBackfill(storeThrough24.historyDoc,[r24,r25]),pc2Results:{...storeThrough24.pc2Results,...projectPc2Backfill(state.pc2_confrontos,[r24,r25])}};
+storeThrough25.historicalRounds=storeThrough25.historyDoc.seasons['2026'].cartola_rounds;
+const stats24=deriveLeagueStatistics(storeThrough24),stats25=deriveLeagueStatistics(storeThrough25);
+const sum=(projection,field)=>projection.rows.reduce((total,row)=>total+row[field],0);
+assert.equal(sum(stats25,'played')-sum(stats24,'played'),10);
+assert.equal(sum(stats25,'wins')-sum(stats24,'wins'),5);
+assert.equal(sum(stats25,'losses')-sum(stats24,'losses'),5);
+assert.equal(sum(stats25,'mvp')-sum(stats24,'mvp'),1);
+assert.equal(sum(stats25,'merda')-sum(stats24,'merda'),1);
+assert.notDeepEqual(stats25.rows.map(row=>row.zikado),stats24.rows.map(row=>row.zikado));
+assert.equal(allScoreRecords(sequentialStore).filter(record=>record.season===2026&&record.round>=24&&record.round<=26).length,30);
+assert.equal(clubStatistics(sequentialStore,ids[0],sequentialStats).recentRounds.some(item=>item.round===24),true);
+assert.equal(clubStatistics(sequentialStore,ids[0],sequentialStats).recentRounds.some(item=>item.round===25),true);
+
+const reloadHistory=mergeCompletedRoundBackfill({seasons:{'2026':{cartola_rounds:{'23':{scores:imports.rounds['23'].scores}}}}},[r24,r25]);
+assert.deepEqual(Object.keys(reloadHistory.seasons['2026'].cartola_rounds).map(Number).sort((a,b)=>a-b),[23,24,25]);
+
+const future=deriveRoundContext({market:{round:26,isOpen:true},completedRoundNumbers:[24,25],hasLiveScores:false});
+assert.equal(future.latestCompletedRound,25);
+assert.equal(future.predictionRound,26);
+assert.equal(future.liveRound,null);
+assert.equal(deriveRoundContext({market:{round:25,isOpen:false},completedRoundNumbers:[24],hasLiveScores:true}).liveRound,25);
+assert.equal(deriveRoundContext({market:{round:25,isOpen:false},completedRoundNumbers:[25],hasLiveScores:false}).latestCompletedRound,25);
+
+const predict=fs.readFileSync(new URL('../assets/js/app/predict.js',import.meta.url),'utf8');
+const rounds=fs.readFileSync(new URL('../assets/js/app/rounds.js',import.meta.url),'utf8');
+const snapshot=fs.readFileSync(new URL('../api/cartola/snapshot.js',import.meta.url),'utf8');
+assert.match(predict,/roundContext\?\.predictionRound/);
+assert.match(predict,/!matchupsReady/);
+assert.match(predict,/Confrontos da rodada ainda não disponíveis/);
+assert.doesNotMatch(predict,/store\.currentPc2Round,fixtures/);
+assert.match(rounds,/roundContext\?\.liveRound/);
+assert.match(rounds,/roundContext\?\.latestCompletedRound/);
+assert.match(snapshot,/cartola_team_official/);
+assert.match(snapshot,/roundComplete/);
+assert.match(snapshot,/hasLiveScores/);
+assert.match(snapshot,/fromRound/);
+assert.match(snapshot,/completedRounds/);
+assert.match(snapshot,/completedRoundCache/);
+assert.match(snapshot,/`\/time\/id\/\$\{id\}\/\$\{round\}`/);
+console.log('round-rollover-test: ok');

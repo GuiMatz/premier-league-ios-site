@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "storage_id": "premier-league-ios-next",
+  "mode": "isolated",
+  "official_writer": "bot",
+  "event_ledger": "events/{season}.jsonl",
+  "baseline": "baselines/pre-engine-2026-r23.json",
+  "state_projection": "seasons/{season}/state.json",
+  "checkpoint": "checkpoints/{season}/Rxx.json",
+  "transactions": "transactions/",
+  "created_at": "2026-08-14T00:00:00Z",
+  "cutover_enabled": false
+}

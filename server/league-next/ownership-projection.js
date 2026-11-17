@@ -1,0 +1,10 @@
+import { buildOwnershipIndex } from '../../lib/league/ownership.js';
+import { hashValue,roundLabel } from './storage.js';
+import { FileStorageProvider } from './providers/file-storage-provider.js';
+
+export function lockedLineupsFromArchive(archive){return Object.values(archive?.locked||{}).map(entry=>entry.lineup).sort((a,b)=>Number(a.team_id)-Number(b.team_id));}
+export function buildOwnershipProjection({archive,activeClubs,generatedAt=null}){const source=canonicalLocked(archive),ownership=buildOwnershipIndex(lockedLineupsFromArchive(archive),activeClubs),body={schema_version:1,season:archive.season,cartola_round:archive.cartola_round,generated_at:generatedAt,status:ownership.status,source_lineups_hash:hashValue(source),ownership};return{...body,ownership_hash:hashValue({...body,generated_at:null})};}
+export function validateOwnershipProjection({projection,archive,activeClubs}){const expected=buildOwnershipProjection({archive,activeClubs,generatedAt:projection.generated_at}),issues=[];if(projection.source_lineups_hash!==expected.source_lineups_hash)issues.push({code:'OWNERSHIP_SOURCE_HASH_MISMATCH'});if(projection.ownership_hash!==expected.ownership_hash)issues.push({code:'OWNERSHIP_HASH_INVALID'});if(hashValue(projection.ownership)!==hashValue(expected.ownership))issues.push({code:'OWNERSHIP_CONTENT_MISMATCH'});return{status:issues.length?'ERROR':'OK',issues,expected};}
+export async function writeOwnershipProjection(root,projection){const path=`seasons/${projection.season}/rounds/${roundLabel(projection.cartola_round)}-ownership.json`;await new FileStorageProvider({root}).writeJson(path,projection);return new FileStorageProvider({root}).resolve(path);}
+export async function writeOwnershipProjectionWithProvider(provider,projection){const path=`seasons/${projection.season}/rounds/${roundLabel(projection.cartola_round)}-ownership.json`;await provider.writeJson(path,projection);return path;}
+function canonicalLocked(archive){return Object.fromEntries(Object.entries(archive?.locked||{}).sort(([a],[b])=>Number(a)-Number(b)).map(([id,entry])=>[id,{payload_hash:entry.payload_hash,lineup:entry.lineup}]));}

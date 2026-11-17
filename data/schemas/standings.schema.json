@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.local/schemas/standings.schema.json",
+  "title": "Classificação oficial",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "competition_id", "edition_id", "season", "status", "rows"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "competition_id": {"type": "string", "minLength": 1},
+    "edition_id": {"type": "string", "minLength": 1},
+    "season": {"type": "integer", "minimum": 2023},
+    "as_of_cartola_round": {"type": ["integer", "null"], "minimum": 1, "maximum": 38},
+    "status": {"enum": ["pending", "partial", "complete", "unavailable"]},
+    "ordering": {"enum": ["computed_by_documented_rules", "preserve_official_source_order"]},
+    "rows": {"type": "array", "items": {"$ref": "#/$defs/row"}}
+  },
+  "$defs": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["position", "team_id"],
+      "properties": {
+        "position": {"type": "integer", "minimum": 1},
+        "team_id": {"type": "integer", "minimum": 1},
+        "competition_points": {"type": ["number", "null"]},
+        "cartola_points": {"type": ["number", "null"]},
+        "played": {"type": ["integer", "null"], "minimum": 0},
+        "wins": {"type": ["integer", "null"], "minimum": 0},
+        "draws": {"type": ["integer", "null"], "minimum": 0},
+        "losses": {"type": ["integer", "null"], "minimum": 0}
+      }
+    }
+  }
+}

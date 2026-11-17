@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "season": 2099,
+  "cartola_round": 1,
+  "transaction_id": "2099-1-noop-noop-real-1786743156705",
+  "event_count": 1,
+  "state_hash": "a6405d17b696631a2145e64aa8f373a0015bbd3b834562ad5d7ab3ef2aa03e55",
+  "committed_at": "2026-08-14T21:32:37.015Z",
+  "status": "committed"
+}

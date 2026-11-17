@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "catalog_id": "pl-ios-competitions",
+  "competitions": [
+    {
+      "competition_id": "pl-ios",
+      "official_name": "Premier League IOS",
+      "short_name": "PL IOS",
+      "public_status": "active",
+      "format": "cartola_points_league",
+      "theme": {"primary": "navy", "secondary": "white"},
+      "seasons": [
+        {"edition_id": "pl-ios-2023", "season": 2023, "format": "cartola_points_league"},
+        {"edition_id": "pl-ios-2024", "season": 2024, "format": "cartola_points_league"},
+        {"edition_id": "pl-ios-2025", "season": 2025, "format": "cartola_points_league"},
+        {"edition_id": "pl-ios-2026", "season": 2026, "format": "cartola_points_league", "round_mapping": {"type": "identity", "cartola_round_start": 1, "cartola_round_end": 38}}
+      ],
+      "rules": {"ranking_metric": "cartola_accumulated_points"}
+    },
+    {
+      "competition_id": "pc1",
+      "official_name": "Pontos Corridos/1",
+      "short_name": "PC/1",
+      "public_status": "finished",
+      "format": "head_to_head_league",
+      "theme": {"primary": "navy", "secondary": "gold"},
+      "seasons": [
+        {"edition_id": "pc1-2024", "season": 2024, "display_name": "Pontos Corridos 2024", "format": "head_to_head_league"},
+        {"edition_id": "pc1-2025", "season": 2025, "format": "head_to_head_league"},
+        {"edition_id": "pc1-2026", "season": 2026, "format": "head_to_head_league", "round_mapping": {"type": "identity", "cartola_round_start": 1, "cartola_round_end": 18, "internal_round_start": 1, "internal_round_end": 18}}
+      ],
+      "rules": {"win_points": 3, "draw_points": 1, "loss_points": 0, "tiebreakers": null, "ordering": "preserve_official_source_order"}
+    },
+    {
+      "competition_id": "pc2",
+      "official_name": "Pontos Corridos/2",
+      "short_name": "PC/2",
+      "public_status": "active",
+      "format": "head_to_head_league",
+      "theme": {"primary": "navy", "secondary": "golden_orange"},
+      "seasons": [
+        {"edition_id": "pc2-2025", "season": 2025, "format": "head_to_head_league"},
+        {"edition_id": "pc2-2026", "season": 2026, "format": "head_to_head_league", "round_mapping": {"type": "offset", "offset": -18, "cartola_round_start": 19, "cartola_round_end": 36, "internal_round_start": 1, "internal_round_end": 18}}
+      ],
+      "rules": {"win_points": 3, "draw_points": 1, "loss_points": 0, "tiebreakers": null, "ordering": "preserve_official_source_order"}
+    },
+    {
+      "competition_id": "copa-ios",
+      "official_name": "Copa IOS",
+      "short_name": "Copa IOS",
+      "public_status": "finished",
+      "format": "knockout",
+      "theme": {"primary": "green", "secondary": "black"},
+      "seasons": [
+        {"edition_id": "copa-ios-2024", "season": 2024, "format": "knockout"},
+        {"edition_id": "copa-ios-2025", "season": 2025, "format": "knockout"},
+        {"edition_id": "copa-ios-2026", "season": 2026, "format": "knockout", "round_mapping": {"type": "explicit", "mappings": [{"phase": "quarterfinal", "cartola_round": 19}, {"phase": "semifinal", "cartola_round": 20}, {"phase": "final_and_third_place", "cartola_round": 21}]}}
+      ],
+      "rules": {"phases": ["quarterfinal", "semifinal", "third_place", "final"]}
+    },
+    {
+      "competition_id": "iwc",
+      "official_name": "IOS World Cup",
+      "short_name": "IWC",
+      "public_status": "finished",
+      "format": "ranking_points",
+      "theme": {"primary": "gold", "secondary": "black"},
+      "seasons": [{"edition_id": "iwc-2026", "season": 2026, "format": "ranking_points", "round_mapping": {"type": "competition_round", "internal_round_start": 1, "internal_round_end": 8}}],
+      "rules": {"ranking_metric": "competition_points"}
+    },
+    {
+      "competition_id": "icwc",
+      "official_name": "IOS Club World Cup",
+      "short_name": "ICWC",
+      "public_status": "finished",
+      "format": "head_to_head_league",
+      "theme": {"primary": "red", "secondary": "black"},
+      "seasons": [{"edition_id": "icwc-2025", "season": 2025, "format": "head_to_head_league"}],
+      "rules": {"ordering": "preserve_official_source_order", "tiebreakers": null}
+    }
+  ]
+}

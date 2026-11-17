@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.local/schemas/club.schema.json",
+  "title": "Catálogo de clubes da Premier League IOS",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "catalog_id", "clubs"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "catalog_id": {"const": "pl-ios-clubs"},
+    "clubs": {"type": "array", "minItems": 10, "uniqueItems": true, "items": {"$ref": "#/$defs/club"}}
+  },
+  "$defs": {
+    "club": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["team_id", "official_name", "short_name", "slug", "crest", "active"],
+      "properties": {
+        "team_id": {"type": "integer", "minimum": 1},
+        "official_name": {"type": "string", "minLength": 1},
+        "short_name": {"type": "string", "minLength": 1},
+        "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "crest": {"type": "string", "pattern": "^assets/clubes/[0-9]+\\.png$"},
+        "responsible": {"type": ["string", "null"], "minLength": 1},
+        "active": {"type": "boolean"}
+      }
+    }
+  }
+}

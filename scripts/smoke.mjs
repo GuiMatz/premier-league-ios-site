@@ -1,0 +1,13 @@
+const storage = new Map();
+globalThis.localStorage = { getItem:k=>storage.get(k)??null, setItem:(k,v)=>storage.set(k,String(v)), removeItem:k=>storage.delete(k) };
+globalThis.sessionStorage = globalThis.localStorage;
+globalThis.window = globalThis;
+globalThis.window.scrollTo = () => {};
+globalThis.setInterval = () => 0;
+const elements = new Map();
+const make = id => ({ id, innerHTML:'', textContent:'', value:'', className:'', style:{}, onclick:null, appendChild(){}, remove(){}, focus(){}, classList:{ add(){}, remove(){}, toggle(){}, contains(){return false;} } });
+globalThis.document = { getElementById(id){ if(!elements.has(id)) elements.set(id,make(id)); return elements.get(id); }, querySelectorAll(){ return []; }, querySelector(){ return null; }, createElement(){ return make(''); } };
+await import('../assets/js/main.js');
+await new Promise(resolve=>setTimeout(resolve,50));
+for(const id of ['nav','matchCards','pcTable','cartolaTable','championshipsView']) if(!elements.has(id)) throw new Error(`elemento não renderizado: ${id}`);
+console.log('OK: entrypoint carregou e a renderização inicial executou.');

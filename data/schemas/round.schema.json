@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.local/schemas/round.schema.json",
+  "title": "Rodada da temporada",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "season", "cartola_round", "status", "contexts"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "season": {"type": "integer", "minimum": 2023},
+    "cartola_round": {"type": "integer", "minimum": 1, "maximum": 38},
+    "status": {"enum": ["scheduled", "market_open", "locked", "partial", "closed", "unavailable"]},
+    "market": {"type": ["object", "null"], "additionalProperties": false, "properties": {"status_id": {"type": ["integer", "null"]}, "closed_at": {"type": ["string", "null"], "format": "date-time"}}},
+    "contexts": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["competition_id", "edition_id", "internal_round"], "properties": {"competition_id": {"type": "string", "minLength": 1}, "edition_id": {"type": "string", "minLength": 1}, "internal_round": {"type": ["integer", "null"], "minimum": 1}}}},
+    "scores_path": {"type": ["string", "null"]},
+    "lineups_path": {"type": ["string", "null"]}
+  }
+}

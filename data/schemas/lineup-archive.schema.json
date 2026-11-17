@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.local/schemas/lineup-archive.schema.json",
+  "title": "Arquivo permanente de escalações por rodada",
+  "description": "Contrato futuro da Fase 4. Nesta etapa nenhum arquivo de escalação é produzido.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "season", "cartola_round", "archive_status", "teams"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "season": {"type": "integer", "minimum": 2023},
+    "cartola_round": {"type": "integer", "minimum": 1, "maximum": 38},
+    "archive_status": {"enum": ["partial", "complete", "unavailable"]},
+    "generated_at": {"type": ["string", "null"], "format": "date-time"},
+    "teams": {"type": "array", "maxItems": 10, "items": {"$ref": "#/$defs/team_archive"}}
+  },
+  "$defs": {
+    "position": {"enum": ["GOL", "LAT", "ZAG", "MEI", "ATA", "TEC"]},
+    "athlete": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["athlete_id", "nickname", "full_name", "position", "real_club_id", "photo_url", "price", "status", "individual_points"],
+      "properties": {
+        "athlete_id": {"type": "integer", "minimum": 1},
+        "nickname": {"type": "string", "minLength": 1},
+        "full_name": {"type": ["string", "null"]},
+        "position": {"$ref": "#/$defs/position"},
+        "real_club_id": {"type": ["integer", "null"], "minimum": 1},
+        "photo_url": {"type": ["string", "null"], "format": "uri"},
+        "price": {"type": ["number", "null"], "minimum": 0},
+        "status": {"type": ["integer", "string", "null"]},
+        "individual_points": {"type": ["number", "null"]}
+      }
+    },
+    "locked": {
+      "type": "object",
+      "readOnly": true,
+      "description": "Snapshot original do fechamento. Escritores não podem sobrescrevê-lo após persistência.",
+      "additionalProperties": false,
+      "required": ["captured_at", "team_round_id", "wealth", "formation", "captain_athlete_id", "luxury_reserve_athlete_id", "starters", "coach"],
+      "properties": {
+        "captured_at": {"type": "string", "format": "date-time"},
+        "team_round_id": {"type": ["integer", "string", "null"]},
+        "wealth": {"type": ["number", "null"], "minimum": 0},
+        "formation": {"type": ["string", "null"], "enum": ["3-4-3", "3-5-2", "4-3-3", "4-4-2", "4-5-1", "5-3-2", "5-4-1", null]},
+        "captain_athlete_id": {"type": ["integer", "null"], "minimum": 1},
+        "luxury_reserve_athlete_id": {"type": ["integer", "null"], "minimum": 1},
+        "starters": {"type": "array", "minItems": 11, "maxItems": 11, "items": {"$ref": "#/$defs/athlete"}},
+        "reserves": {"type": "array", "maxItems": 5, "description": "Banco normal preservado separadamente; opcional para manter compatibilidade com snapshots histÃ³ricos.", "items": {"$ref": "#/$defs/athlete"}},
+        "coach": {"anyOf": [{"$ref": "#/$defs/athlete"}, {"type": "null"}]}
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "updated_at", "team_points", "wealth", "luxury_reserve_triggered", "athletes"],
+      "properties": {
+        "status": {"enum": ["partial", "final", "unavailable"]},
+        "updated_at": {"type": "string", "format": "date-time"},
+        "team_points": {"type": ["number", "null"]},
+        "wealth": {"type": ["number", "null"], "minimum": 0},
+        "luxury_reserve_triggered": {"type": ["boolean", "null"]},
+        "athletes": {"type": "array", "items": {"$ref": "#/$defs/athlete"}}
+      }
+    },
+    "team_archive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["team_id", "competition_contexts", "locked_status", "locked", "result"],
+      "properties": {
+        "team_id": {"type": "integer", "minimum": 1},
+        "competition_contexts": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["competition_id", "edition_id", "internal_round"], "properties": {"competition_id": {"type": "string"}, "edition_id": {"type": "string"}, "internal_round": {"type": ["integer", "null"], "minimum": 1}}}},
+        "locked_status": {"enum": ["complete", "recovered", "unavailable"]},
+        "locked": {"anyOf": [{"$ref": "#/$defs/locked"}, {"type": "null"}]},
+        "result": {"anyOf": [{"$ref": "#/$defs/result"}, {"type": "null"}]}
+      },
+      "allOf": [{"if": {"properties": {"locked_status": {"const": "unavailable"}}}, "then": {"properties": {"locked": {"type": "null"}}}, "else": {"properties": {"locked": {"$ref": "#/$defs/locked"}}}}]
+    }
+  }
+}

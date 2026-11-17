@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.local/schemas/season.schema.json",
+  "title": "Edição de competição",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["edition_id", "season", "format"],
+  "properties": {
+    "edition_id": {"type": "string", "pattern": "^[a-z0-9-]+-[0-9]{4}$"},
+    "season": {"type": "integer", "minimum": 2023},
+    "display_name": {"type": "string", "minLength": 1},
+    "format": {"enum": ["cartola_points_league", "head_to_head_league", "knockout", "ranking_points"]},
+    "round_mapping": {"$ref": "#/$defs/round_mapping"}
+  },
+  "$defs": {
+    "round_mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": {"enum": ["identity", "offset", "explicit", "competition_round"]},
+        "offset": {"type": "integer"},
+        "cartola_round_start": {"type": "integer", "minimum": 1, "maximum": 38},
+        "cartola_round_end": {"type": "integer", "minimum": 1, "maximum": 38},
+        "internal_round_start": {"type": "integer", "minimum": 1},
+        "internal_round_end": {"type": "integer", "minimum": 1},
+        "mappings": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["phase", "cartola_round"], "properties": {"phase": {"type": "string", "minLength": 1}, "cartola_round": {"type": "integer", "minimum": 1, "maximum": 38}}}}
+      }
+    }
+  }
+}

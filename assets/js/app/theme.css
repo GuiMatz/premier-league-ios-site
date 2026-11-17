@@ -1,0 +1,75 @@
+:root{
+  --page-bg:var(--bg);--surface-raised:var(--surface);--text-primary:var(--fg);--text-secondary:var(--muted);
+  --table-head:oklch(.945 .012 250);--table-row:var(--surface);--table-row-alt:oklch(.975 .008 250);
+  --table-hover:oklch(.94 .018 250);--favorite-row:oklch(.94 .025 250);--bottom-nav-height:82px;
+  color-scheme:light;
+}
+html[data-color-theme="dark"]{
+  --bg:oklch(.145 .025 258);--surface:oklch(.205 .025 258);--fg:oklch(.925 .012 250);
+  --muted:oklch(.70 .018 250);--border:oklch(.36 .025 255);--accent:oklch(.70 .16 252);
+  --accent-hi:oklch(.76 .13 250);--navy:oklch(.20 .055 258);--navy-2:oklch(.27 .07 258);
+  --shadow:0 18px 50px oklch(.05 .02 258/.35);--shadow-soft:0 8px 28px oklch(.05 .02 258/.25);
+  --page-bg:var(--bg);--surface-raised:oklch(.235 .026 258);--text-primary:var(--fg);--text-secondary:var(--muted);
+  --table-head:oklch(.255 .03 258);--table-row:var(--surface);--table-row-alt:oklch(.18 .025 258);
+  --table-hover:oklch(.29 .035 258);--favorite-row:oklch(.28 .055 252);
+  color-scheme:dark;
+}
+body{background-color:var(--page-bg);color:var(--text-primary)}
+.theme-toggle{position:fixed;right:20px;bottom:20px;z-index:140;width:44px;height:44px;padding:0;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;color:var(--text-primary);background:var(--surface-raised);box-shadow:var(--shadow-soft);font:20px/1 "Segoe UI Emoji","Apple Color Emoji",sans-serif;cursor:pointer}
+.theme-toggle:hover{background:var(--table-hover)}.theme-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+html[data-color-theme="dark"] :is(.table-card,.news,.highlight,.favorite-card,.competition-detail,.season-competition-card,.club-card,.other-team-card,.record-card,.ranking-card,.record-row,.predict-match,.predict-awards label,.prediction-summary,.rules-dialog,.lineup-card,.compare,.card,.tabs,.panel-card,.summary-card,.stat-card,.stat,.match-card,.round-card,.season-detail,.profile-dialog,.profile-form){background-color:var(--surface);color:var(--fg);border-color:var(--border)}
+html[data-color-theme="dark"] :is(input,select,textarea,.winner-option span,.largest,.rules-dialog header button,.profile-menu,.profile-menu button,.year-switcher button){color:var(--fg);background-color:var(--surface-raised);border-color:var(--border)}
+html[data-color-theme="dark"] table thead,
+html[data-color-theme="dark"] :is(.table,.season-table,.records-table) .head{color:var(--fg);background:var(--table-head)}
+html[data-color-theme="dark"] table tbody tr,
+html[data-color-theme="dark"] .season-row{background:var(--table-row);border-color:var(--border)}
+html[data-color-theme="dark"] table tbody tr:nth-child(even),
+html[data-color-theme="dark"] .season-row:nth-child(odd):not(.head){background:var(--table-row-alt)}
+html[data-color-theme="dark"] table tbody tr:hover,
+html[data-color-theme="dark"] .season-row:not(.head):hover{background:var(--table-hover)}
+html[data-color-theme="dark"] :is(.table .favorite-row,.favorite-row){background:var(--favorite-row)}
+html[data-color-theme="dark"] :is(.predict-hero,.predict-status>div){color:var(--fg);background:var(--surface);border-color:var(--border)}
+html[data-color-theme="dark"] .predict-title p{color:var(--muted)}
+html[data-color-theme="dark"] .rules-button{color:var(--fg);background:var(--surface-raised);border-color:var(--fg)}
+html[data-color-theme="dark"] .rules-button:hover{color:var(--navy);background:var(--fg)}
+html[data-color-theme="dark"] .predict-page[data-predict-state="open"] #predictState,
+html[data-color-theme="dark"] .predict-open{color:oklch(.78 .17 145)!important}
+html[data-color-theme="dark"] :is(.cup-duel,.third-place,.cup-stage,.competition-identity,.pl-champions){color:var(--fg);border-color:var(--border)}
+html[data-color-theme="dark"] :is(.table-club img,.season-row img,.competition-identity img,.cup-team img,.club-card img,.other-team-card img,.record-row img,.lineup-card img){background:oklch(.94 .01 250);border-radius:10px;padding:3px}
+.pl-champions{margin-top:18px;padding:16px 18px;border:1px solid var(--border);border-radius:16px;background:var(--table-row-alt)}
+.pl-champions h3{margin:0 0 10px;font:600 17px/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.pl-champion-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.pl-champion{min-height:48px;padding:8px 10px;display:grid;grid-template-columns:auto 28px minmax(0,1fr);align-items:center;gap:8px;border:1px solid var(--border);border-radius:11px;background:var(--surface)}
+.pl-champion>span{color:var(--muted);font-size:10px;font-weight:600}.pl-champion img{width:28px;height:28px;object-fit:contain}.pl-champion strong{min-width:0;font-size:10px;line-height:1.25}.pl-champion.pending{grid-template-columns:auto 1fr}.pl-champion.pending strong{color:var(--muted);font-weight:500}
+@media(max-width:760px){.theme-toggle{right:14px;bottom:calc(var(--bottom-nav-height) + env(safe-area-inset-bottom) + 14px)}.pl-champion-list{grid-template-columns:1fr 1fr}}
+@media(max-width:340px){.theme-toggle{right:10px}.pl-champion-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){body,.theme-toggle,.table tbody tr,.season-row{transition:background-color 140ms ease,color 140ms ease,border-color 140ms ease}}
+@media(prefers-reduced-motion:reduce){.theme-toggle,body,.table tbody tr,.season-row{transition:none!important}}
+.simplified-leagues .season-competition-card img{width:40px;height:40px;object-fit:contain}
+html[data-color-theme="dark"] .simplified-leagues .season-competition-card{color:var(--fg);background:var(--surface);border-color:var(--border)}
+html[data-color-theme="dark"] .simplified-leagues .season-competition-card:hover{color:var(--fg);background:var(--table-hover);border-color:var(--muted)}
+html[data-color-theme="dark"] .simplified-leagues .season-competition-card[aria-pressed="true"]{color:oklch(.96 .008 250);background:var(--navy-2);border-color:var(--accent);box-shadow:0 0 0 2px oklch(.70 .16 252/.2)}
+html[data-color-theme="dark"] .simplified-leagues .season-competition-card img{background:oklch(.28 .025 258);border-radius:10px;padding:4px}
+html[data-color-theme="dark"] :is(.competition-identity img,.competition-media img,.cup-board-head img){background:oklch(.28 .025 258);border-radius:10px;padding:4px}
+html[data-color-theme="dark"] .cup-team{color:var(--text-primary);background:var(--surface)}
+html[data-color-theme="dark"] .cup-team.winner{color:oklch(.94 .035 145);background:oklch(.30 .075 150);border-color:oklch(.62 .12 150)}
+html[data-color-theme="dark"] .champion-line{color:oklch(.98 0 0);background:oklch(.25 .09 150);border-top:1px solid oklch(.62 .12 150)}
+html[data-color-theme="dark"] .third-place .cup-duel{background:var(--surface)}
+html[data-color-theme="dark"] :is(.tabs-wrap,.tabs){color:var(--fg);background:var(--surface);border-color:var(--border)}
+html[data-color-theme="dark"] .tabs-wrap{box-shadow:0 8px 20px oklch(.05 .02 258/.22)}
+html[data-color-theme="dark"] .tab{color:var(--muted);background:transparent}
+html[data-color-theme="dark"] .tab:hover{color:var(--fg);background:var(--table-hover)}
+html[data-color-theme="dark"] .tab[aria-selected="true"]{color:oklch(.96 .008 250);background:var(--navy-2)}
+html[data-color-theme="dark"] :is(.ranking-table tr.favorite,.record-row.favorite,.favorite-summary){color:var(--fg);background:var(--favorite-row)}
+html[data-color-theme="dark"] :is(.ranking-table tr.favorite,.record-row.favorite,.favorite-summary) strong{color:var(--fg)}
+html:not([data-color-theme="dark"]) .predict-status{color:var(--fg);background:var(--border);border-color:var(--border)}
+html:not([data-color-theme="dark"]) .predict-status>div{color:var(--fg);background:var(--surface);border-color:var(--border)}
+html:not([data-color-theme="dark"]) .predict-status span{color:var(--muted)}
+html:not([data-color-theme="dark"]) .predict-status strong{color:var(--fg)}
+html:not([data-color-theme="dark"]) .predict-page[data-predict-state="open"] #predictState{color:oklch(.42 .16 145)}
+html:not([data-color-theme="dark"]) .predict-page[data-predict-state="closed"] #predictState{color:var(--fg)}
+html[data-color-theme="dark"] .profile-dialog{color:var(--fg);background:var(--surface);border-color:var(--border)}
+html[data-color-theme="dark"] :is(.profile-form-head button,.profile-form input[name="name"],.club-picker label span){color:var(--fg);background:var(--surface-raised);border-color:var(--border)}
+html[data-color-theme="dark"] .club-picker label span:hover{background:var(--table-hover);border-color:var(--muted)}
+html[data-color-theme="dark"] .club-picker input:checked+span{color:var(--fg);background:var(--favorite-row);border-color:var(--accent);box-shadow:0 0 0 2px oklch(.70 .16 252/.2)}
+html[data-color-theme="dark"] .club-picker img{background:oklch(.28 .025 258);border-radius:9px;padding:3px;object-fit:contain}

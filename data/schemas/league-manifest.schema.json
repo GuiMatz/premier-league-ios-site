@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.example/schemas/league-manifest.schema.json",
+  "title": "Manifesto operacional da Premier League IOS",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "league_id",
+    "environment",
+    "writer",
+    "season",
+    "current_cartola_round",
+    "last_processed_round",
+    "updated_at",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "league_id": {"type": "string", "const": "premier-league-ios"},
+    "environment": {
+      "type": "string",
+      "enum": ["development", "shadow", "production"]
+    },
+    "writer": {"type": "string", "enum": ["bot", "site"]},
+    "season": {"type": "integer", "minimum": 2023, "maximum": 9999},
+    "current_cartola_round": {"type": "integer", "minimum": 0, "maximum": 99},
+    "last_processed_round": {"type": "integer", "minimum": 0, "maximum": 99},
+    "last_successful_event_id": {"type": ["string", "null"]},
+    "baseline_ref": {"type": ["string", "null"]},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "schema_version": {"type": "integer", "minimum": 1}
+        }
+      }
+    }
+  }
+}

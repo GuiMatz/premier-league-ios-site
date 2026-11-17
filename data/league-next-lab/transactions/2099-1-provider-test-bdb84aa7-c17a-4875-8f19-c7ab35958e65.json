@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transaction_id": "2099-1-provider-test-bdb84aa7-c17a-4875-8f19-c7ab35958e65",
+  "season": 2099,
+  "cartola_round": 1,
+  "operation": "provider-test",
+  "status": "committed",
+  "created_at": "2026-08-14T21:11:40.835Z",
+  "committed_at": "2026-08-14T21:11:40.835Z",
+  "writes": [
+    {
+      "target": "lab-tests/manual-lab-1786741900383/probe.json",
+      "content_hash": "a310cb0551e0ca572fe7ccd66173157428891383318c336dc2394cf98731cbea",
+      "committed": true
+    },
+    {
+      "target": "lab-tests/manual-lab-1786741900383/checkpoint.json",
+      "content_hash": "c67a8436d0da40256dc7ad73e1eaeef2c0e480e92f9d82d2caf8ee1816e77ac3",
+      "committed": true
+    }
+  ],
+  "metadata": {},
+  "execution_context": {
+    "run_id": "manual-lab-1786741900383",
+    "environment": "laboratory",
+    "writer": "bot",
+    "season": 2099,
+    "cartola_round": 1,
+    "operation": "provider-test",
+    "started_at": "2026-08-14T21:11:40.383Z",
+    "attempt": 1,
+    "dry_run": true,
+    "shadow": true
+  },
+  "expected_version": "35e93b544da5ca3aaa4f9b5acfaacce43c399c9a"
+}

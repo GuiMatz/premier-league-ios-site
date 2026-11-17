@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://premierleagueios.example/schemas/event.schema.json",
+  "title": "Evento idempotente da engine da Premier League IOS",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "schema_version",
+    "season",
+    "cartola_round",
+    "event_type",
+    "scope_id",
+    "occurred_at",
+    "source",
+    "payload_hash",
+    "payload"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^[0-9]{4}:[0-9]{1,2}:[a-z][a-z0-9_.-]*:[A-Za-z0-9][A-Za-z0-9_.-]*$"
+    },
+    "schema_version": {"type": "integer", "const": 1},
+    "season": {"type": "integer", "minimum": 2023, "maximum": 9999},
+    "cartola_round": {"type": "integer", "minimum": 1, "maximum": 99},
+    "event_type": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$",
+      "minLength": 3,
+      "maxLength": 80
+    },
+    "scope_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "source": {
+      "type": "string",
+      "enum": ["bot", "site", "migration", "manual", "recovery"]
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "payload": {"type": "object"}
+  },
+  "allOf": [
+    {
+      "description": "event_id deve ser montado logicamente como season:cartola_round:event_type:scope_id; a igualdade entre os campos é validada pela camada de aplicação."
+    }
+  ]
+}

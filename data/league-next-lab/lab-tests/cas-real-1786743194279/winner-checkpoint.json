@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "season": 2099,
+  "cartola_round": 1,
+  "transaction_id": "2099-1-cas-winner-cas-real-1786743194279",
+  "event_count": 0,
+  "state_hash": "9b024fdb9714d6db32c9001998941dc63f1db8d002d6080bde2a0c467697d95b",
+  "committed_at": "2026-08-14T21:33:14.594Z",
+  "status": "committed"
+}

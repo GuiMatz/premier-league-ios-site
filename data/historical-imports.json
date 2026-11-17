@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "season": 2026,
+  "current_cartola_round": 24,
+  "rounds": {
+    "23": {
+      "cartola_round": 23,
+      "competition_id": "pc2",
+      "competition_round": 5,
+      "status": "concluded",
+      "provenance": "historical_import_pre_cutover",
+      "engine_managed": false,
+      "engine_validation": "not_validated",
+      "lineups_status": "unavailable",
+      "source": "reports/shadow/2026/R23/final-comparison.json#official_final_score",
+      "source_authoritative": true,
+      "scores": {
+        "10000001": 79.669921875,
+        "10000002": 86.16015625,
+        "10000003": 71.5498046875,
+        "10000004": 75.8701171875,
+        "10000005": 65.9501953125,
+        "10000006": 64.72021484375,
+        "10000007": 56.14990234375,
+        "10000008": 34.52001953125,
+        "10000009": 83.669921875,
+        "10000010": 56.52001953125
+      },
+      "matches": [
+        [10000001, 79.669921875, 10000006, 64.72021484375],
+        [10000003, 71.5498046875, 10000004, 75.8701171875],
+        [10000008, 34.52001953125, 10000010, 56.52001953125],
+        [10000002, 86.16015625, 10000009, 83.669921875],
+        [10000007, 56.14990234375, 10000005, 65.9501953125]
+      ]
+    }
+  }
+}

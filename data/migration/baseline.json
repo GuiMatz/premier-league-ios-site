@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "baseline_id": "pre-engine-2026-r23",
+  "created_at": "2026-08-14T16:37:43.8916047Z",
+  "hash_algorithm": "sha256",
+  "known_state": {
+    "season": 2026,
+    "current_cartola_round": 23,
+    "last_processed_round": 22,
+    "official_writer": "bot"
+  },
+  "entrypoint": "BOT CARTOLA/bot.py",
+  "legacy_sources": [
+    {"path": "BOT CARTOLA/state.json", "role": "operational_state"},
+    {"path": "BOT CARTOLA/state_public.json", "role": "public_projection"},
+    {"path": "BOT CARTOLA/historico_rodadas.json", "role": "round_history"}
+  ],
+  "official_files": [
+    {"path": "BOT CARTOLA/state.json", "bytes": 9943, "sha256": "14047b517bb075c864f4dbcba50ea24b067f57c6a38077d88763160a89b9832f"},
+    {"path": "BOT CARTOLA/state_public.json", "bytes": 20612, "sha256": "352ce2b48745d9fda49bc4d763bf8fb33c1997f360f3998c326a62f34af684c8"},
+    {"path": "BOT CARTOLA/historico_rodadas.json", "bytes": 40313, "sha256": "fd6fcb0a3c1ba6c9dc0fc7997e6d07e6fae79b5cf843d9af414b239ffea205ea"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/catalog/clubs.json", "bytes": 2062, "sha256": "64a7c164e1b46f0a036ad7e85e22772571570abc1f2f4a94795a956488fb3036"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/catalog/competitions.json", "bytes": 3970, "sha256": "842b632e20b12ba6523c4e40982e889a7edd2fe384df4a31e88cde04e3217bcf"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/schemas/club.schema.json", "bytes": 1160, "sha256": "2cbdc6986e53ac9aa73beb8584e6b8d39f7a445e2f809c192048328ae9d062d5"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/schemas/competition.schema.json", "bytes": 1954, "sha256": "c6fbb0c29f50c3b5475667be7789ab07c6f6aa9909d2ab6b6035c8d3f9cd448c"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/schemas/lineup-archive.schema.json", "bytes": 4438, "sha256": "ac3b2a53aa2296ed2bf8203c4a6f0fbc4a703b9eca6401fbd2729f6430e194c9"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/schemas/match.schema.json", "bytes": 1275, "sha256": "c766c864572825e0b9aa322edafbc5aae754ef47855e326f3daa0cfa9cf6b6d0"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/schemas/round.schema.json", "bytes": 1226, "sha256": "f75a70b39df2d9200a06b2d3dfc167261c2c1afd60378c91e1676893911567c6"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/schemas/season.schema.json", "bytes": 1501, "sha256": "b527a6b6cbfcc43397d4b09a928e722c901ad4f1b9eba160be35e92fa41ace9a"},
+    {"path": "Premier-League-IOS-SITE-refatorado/data/schemas/standings.schema.json", "bytes": 1509, "sha256": "6ce47048a297c4ad02d17ab5b7ef28eeed149f4705d655e43a22dec9ba550204"}
+  ]
+}

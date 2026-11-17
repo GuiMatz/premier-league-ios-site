@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Palpites — Premier League IOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/js/app/shared.css">
+  <link rel="stylesheet" href="assets/js/app/predict.css">
+  <link rel="stylesheet" href="assets/js/app/shared.css">
+  <link rel="stylesheet" href="assets/js/app/navigation-shell.css">
+  <link rel="stylesheet" href="assets/js/app/theme.css">
+  <link rel="stylesheet" href="assets/js/app/championship-redesign.css">
+  <script src="assets/js/app/theme-boot.js"></script>
+  <script src="assets/js/app/navigation-boot.js"></script>
+  <script src="assets/js/app/profile-boot.js"></script>
+</head>
+<body class="predict-page" data-predict-state="unavailable">
+  <header class="site-header" data-od-id="predict-header">
+    <div class="shell header-row">
+      <a class="brand" href="home-page.html" data-od-id="predict-brand"><img src="assets/images/league-logo.png" alt="Logo Premier League IOS"><span><strong>Premier League IOS</strong><small>A maior liga do Cartola</small></span></a>
+      <nav class="desktop-nav" aria-label="Navegação principal"><a href="home-page.html">Início</a><a href="palpites.html" aria-current="page">Palpites</a><a href="temporada-2026.html">Temporada</a><a href="rodadas.html">Rodadas</a><a href="escalacoes.html">Escalações</a><a href="times.html">Times</a><a href="estatisticas.html">Estatísticas</a><a href="historia.html">História</a></nav>
+      <button class="profile-button" id="profileButton" type="button" data-od-id="predict-profile"><img src="assets/images/league-logo.png" alt=""><span id="profileName">Escolha seu time</span></button>
+    </div>
+  </header>
+  <main class="shell predict-main">
+    <section class="predict-hero" data-od-id="predict-hero">
+      <div class="predict-title"><span class="eyebrow">PC/2 · Predict</span><h1>Palpites da rodada</h1><p>Escolha o resultado dos cinco confrontos e os destaques antes do fechamento do mercado.</p></div>
+      <button class="rules-button" id="rulesButton" type="button" aria-haspopup="dialog" aria-controls="rulesDialog" data-od-id="predict-rules-open"><span aria-hidden="true">?</span><small>Regras</small></button>
+      <div class="predict-status" aria-live="polite" data-od-id="predict-market-status">
+        <div><span>Rodada atual</span><strong id="predictRound">Rodada indisponível</strong></div>
+        <div><span>Status do mercado</span><strong id="predictState"><i aria-hidden="true"></i> Status indisponível</strong></div>
+        <div><span id="predictTimerLabel">Fechamento</span><strong id="predictTimer">—</strong></div>
+      </div>
+    </section>
+    <form id="predictForm" data-od-id="predict-form">
+      <fieldset id="matchesField" class="predict-section"><legend>Confrontos</legend><p class="field-help">Escolha vitória, empate ou derrota. Depois marque somente um jogo como provável maior diferença.</p><div id="predictMatches" class="predict-matches"></div></fieldset>
+      <section class="predict-section" data-od-id="predict-highlights"><div class="section-head"><div><span class="eyebrow">Escolhas individuais</span><h2>Destaques da rodada</h2></div></div><div class="predict-awards"><label><span class="award-mark trophy-mark" aria-hidden="true"></span><strong>Melhor da rodada</strong><small>Vale +5 pts</small><select id="bestTeam" name="bestTeam"><option value="">Selecionar time</option></select></label><label><span class="award-mark worst-mark" aria-hidden="true"></span><strong>Pior da rodada</strong><small>Vale +5 pts</small><select id="worstTeam" name="worstTeam"><option value="">Selecionar time</option></select></label></div></section>
+      <section class="prediction-summary" data-od-id="predict-summary"><div><span class="eyebrow">Seu palpite</span><h2>Resumo</h2></div><dl><div><dt>Confrontos preenchidos</dt><dd id="summaryMatches">0/5</dd></div><div><dt>Maior diferença</dt><dd id="summaryLargest">Não escolhido</dd></div><div><dt>Melhor</dt><dd id="summaryBest">Não escolhido</dd></div><div><dt>Pior</dt><dd id="summaryWorst">Não escolhido</dd></div></dl><div class="max-score"><span>Pontuação máxima possível</span><strong>40 <small>pts</small></strong><p>Referência das regras, não pontuação conquistada.</p></div></section>
+      <div class="predict-submit" data-od-id="predict-submit"><div><strong>Envio oficial ainda não disponível.</strong><p id="predictNotice">Nenhum dado será salvo ou enviado.</p></div><button class="btn btn-primary" id="predictSubmit" type="submit" disabled>Enviar palpites</button></div>
+    </form>
+    <footer class="public-footer">© 2026 Premier League IOS.</footer>
+  </main>
+  <dialog id="rulesDialog" class="rules-dialog" data-od-id="predict-rules-dialog"><article><header><div><span class="eyebrow">Como funciona</span><h2>Regras dos palpites</h2></div><button id="closeRules" type="button" aria-label="Fechar regras">×</button></header><div class="rules-grid"><section><span>01</span><strong>Acertar vencedor</strong><b>+5 pts</b><p>Por confronto correto.</p></section><section><span>02</span><strong>Melhor da rodada</strong><b>+5 pts</b><p>Um clube entre os dez participantes.</p></section><section><span>03</span><strong>Pior da rodada</strong><b>+5 pts</b><p>Um clube entre os dez participantes.</p></section><section><span>04</span><strong>Maior diferença</strong><b>5 → 10 pts</b><p>O jogo marcado vale 10 quando o vencedor estiver correto e o confronto for um dos maiores diferenciais.</p></section></div><div class="rules-note"><p>Se dois ou mais jogos empatarem na maior diferença, qualquer um dos confrontos empatados é válido. Vencedor errado vale zero.</p><strong>Máximo: 40 pontos por rodada</strong></div></article></dialog>
+  <nav class="mobile-nav" aria-label="Navegação móvel" data-od-id="predict-mobile-nav"><a href="home-page.html" data-symbol="⌂">Início</a><a href="palpites.html" aria-current="page" data-symbol="?">Palpites</a><a href="temporada-2026.html" data-symbol="▦">Temporada</a><a href="rodadas.html" data-symbol="◉">Rodadas</a><a href="times.html" data-symbol="♟">Times</a></nav>
+  <script type="module" src="assets/js/app/predict.js"></script><script type="module" src="assets/js/app/public-shell.js"></script>
+</body>
+</html>

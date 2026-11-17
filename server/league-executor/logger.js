@@ -1,0 +1,4 @@
+import { ALERT_LEVEL } from './constants.js';
+export function createStructuredLogger({sink=entry=>console.error(JSON.stringify(entry)),clock=()=>new Date()}={}){return{log(context,input={}){const entry={run_id:context.run_id,timestamp:clock().toISOString(),environment:context.environment,season:context.season,cartola_round:context.cartola_round,operation:context.operation,status:input.status||'UNKNOWN',duration_ms:Number(input.duration_ms||0),attempt:context.attempt,warnings:input.warnings||[],errors:input.errors||[]};sink(entry);return entry;}};}
+const CRITICAL_CODES=new Set(['LOCKED_CONFLICT','WRITER_CONFLICT','FINAL_SCORE_MISMATCH','LEDGER_INVALID','INTEGRITY_FAILED','RECOVERY_REQUIRED']);
+export const classifyAlert=status=>CRITICAL_CODES.has(status)?'CRITICAL':ALERT_LEVEL[status]||'WARNING';

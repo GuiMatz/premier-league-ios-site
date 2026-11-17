@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "catalog_id": "pl-ios-clubs",
+  "clubs": [
+    {"team_id": 10000001, "official_name": "Shaktar Meminetsk", "short_name": "Meminetsk", "slug": "shaktar-meminetsk", "crest": "assets/clubes/10000001.png", "responsible": "Meminetsk", "active": true},
+    {"team_id": 10000002, "official_name": "INTER DE BIGÃO", "short_name": "Inter de Bigão", "slug": "inter-de-bigao", "crest": "assets/clubes/10000002.png", "responsible": "Bigão", "active": true},
+    {"team_id": 10000003, "official_name": "ValeGuiDoce Esporte Clube", "short_name": "ValeGuiDoce", "slug": "valeguidoce", "crest": "assets/clubes/10000003.png", "responsible": "ValeGuiDoce", "active": true},
+    {"team_id": 10000004, "official_name": "Rafa Casablanca Athletic", "short_name": "Rafa Casablanca", "slug": "rafa-casablanca", "crest": "assets/clubes/10000004.png", "responsible": "Rafa Casa", "active": true},
+    {"team_id": 10000005, "official_name": "Manteto United FC", "short_name": "Manteto", "slug": "manteto", "crest": "assets/clubes/10000005.png", "responsible": "Manteto", "active": true},
+    {"team_id": 10000006, "official_name": "Rafalovers FC", "short_name": "RafaLovers", "slug": "rafalovers", "crest": "assets/clubes/10000006.png", "responsible": "RafaLovers", "active": true},
+    {"team_id": 10000007, "official_name": "Easy Money Sn1per", "short_name": "Easy Money", "slug": "easy-money", "crest": "assets/clubes/10000007.png", "responsible": "Easy Money", "active": true},
+    {"team_id": 10000008, "official_name": "Grishatasaray", "short_name": "Grishatasaray", "slug": "grishatasaray", "crest": "assets/clubes/10000008.png", "responsible": "Grisha", "active": true},
+    {"team_id": 10000009, "official_name": "Paris Saint Zuis", "short_name": "PS Zuis", "slug": "paris-saint-zuis", "crest": "assets/clubes/10000009.png", "responsible": "Zuis", "active": true},
+    {"team_id": 10000010, "official_name": "Titiham", "short_name": "Titiham", "slug": "titiham", "crest": "assets/clubes/10000010.png", "responsible": "Titiham", "active": true}
+  ]
+}

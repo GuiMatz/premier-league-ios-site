@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {latestCompletedRoundMvp} from '../assets/js/app/data-store.js';
+const state=JSON.parse(fs.readFileSync(new URL('../data/state_public.json',import.meta.url),'utf8'));
+const clubs=JSON.parse(fs.readFileSync(new URL('../data/catalog/clubs.json',import.meta.url),'utf8')).clubs;
+const scores={10000001:120.64013671875,10000010:53.9599609375,10000009:90.39990234375,10000005:84.68994140625,10000004:87.7001953125,10000002:131,10000003:119.419921875,10000007:78.490234375,10000008:35.6298828125,10000006:76.31005859375};
+const fixtures=state.pc2_confrontos['6'],results=fixtures.map(([a,b])=>[a,scores[a],b,scores[b]]),store={clubs,stateDoc:state,historicalRounds:{24:{scores}},pc1Results:{},pc2Results:{6:results}};
+const mvp=latestCompletedRoundMvp(store),max=Math.max(...Object.values(scores));
+assert.deepEqual(mvp,{teamId:10000002,points:max,round:24,season:2026});
+const home=fs.readFileSync(new URL('../assets/js/app/home.js',import.meta.url),'utf8');
+assert.match(home,/latestCompletedRoundMvp\(store\)/);
+assert.doesNotMatch(home,/cards\[2\][^\n]*store\.lastMvp/);
+console.log(`LATEST_COMPLETED_ROUND=${mvp.round}`);
+console.log('HOME_LATEST_MVP_TEAM=INTER DE BIGÃO');
+console.log(`HOME_LATEST_MVP_SCORE=${mvp.points}`);
+console.log('HOME_MVP_MATCHES_LATEST_FINAL=YES');

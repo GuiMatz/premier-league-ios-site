@@ -1,0 +1,42 @@
+{
+  "functions": {
+    "api/league/*.js": {
+      "includeFiles": "data/{catalog/clubs.json,migration/golden-sources.json,historico_rodadas.json}"
+    }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/home-page.html" },
+    { "source": "/ligas", "destination": "/temporada-2026.html" },
+    { "source": "/temporada", "destination": "/temporada-2026.html" },
+    { "source": "/parciais", "destination": "/rodadas.html" },
+    { "source": "/rodadas", "destination": "/rodadas.html" },
+    { "source": "/escalacoes", "destination": "/escalacoes.html" },
+    { "source": "/palpites", "destination": "/palpites.html" },
+    { "source": "/times", "destination": "/times.html" },
+    { "source": "/estatisticas", "destination": "/estatisticas.html" },
+    { "source": "/historia", "destination": "/historia.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    }
+  ]
+}

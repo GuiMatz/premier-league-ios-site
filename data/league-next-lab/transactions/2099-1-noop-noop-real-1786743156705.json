@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "transaction_id": "2099-1-noop-noop-real-1786743156705",
+  "season": 2099,
+  "cartola_round": 1,
+  "operation": "noop-validation",
+  "status": "committed",
+  "created_at": "2026-08-14T21:32:37.015Z",
+  "committed_at": "2026-08-14T21:32:37.015Z",
+  "writes": [
+    {
+      "target": "lab-tests/noop-real-1786743156705/noop-event.jsonl",
+      "content_hash": "2e8c146f3cc7c6fd05f1142c446f1c8eb1407645ba989cc1b2a800c0ddb3fe11",
+      "committed": true
+    },
+    {
+      "target": "lab-tests/noop-real-1786743156705/probe.json",
+      "content_hash": "431e5a35c0fa1adb4c3460362eb4448c6adb23fdd577290d6e86a068f0cb3bd3",
+      "committed": true
+    },
+    {
+      "target": "lab-tests/noop-real-1786743156705/checkpoint.json",
+      "content_hash": "fd12e09ca7ee15e0ca210d2f40569db83afdad8d43e01856c250da6cec66cdbf",
+      "committed": true
+    }
+  ],
+  "metadata": {
+    "transaction_id": "2099-1-noop-noop-real-1786743156705"
+  },
+  "execution_context": null,
+  "expected_version": "699eb5410ba5c95d36dd9a3f3c89a4bb4ba07abb"
+}

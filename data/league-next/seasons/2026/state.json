@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "season": 2026,
+  "global": {
+    "teams": {
+      "10000001": {
+        "wins": 65,
+        "draws": 0,
+        "losses": 28,
+        "played": 93,
+        "mvp": 15,
+        "merda": 0,
+        "zikado": 0
+      },
+      "10000010": {
+        "wins": 4,
+        "draws": 0,
+        "losses": 18,
+        "played": 22,
+        "mvp": 0,
+        "merda": 6,
+        "zikado": 29
+      },
+      "10000009": {
+        "wins": 21,
+        "draws": 0,
+        "losses": 40,
+        "played": 61,
+        "mvp": 7,
+        "merda": 1,
+        "zikado": 8
+      },
+      "10000005": {
+        "wins": 53,
+        "draws": 0,
+        "losses": 41,
+        "played": 94,
+        "mvp": 8,
+        "merda": 1,
+        "zikado": 5
+      },
+      "10000004": {
+        "wins": 56,
+        "draws": 0,
+        "losses": 39,
+        "played": 95,
+        "mvp": 9,
+        "merda": 4,
+        "zikado": 6
+      },
+      "10000002": {
+        "wins": 58,
+        "draws": 0,
+        "losses": 34,
+        "played": 92,
+        "mvp": 7,
+        "merda": 2,
+        "zikado": 2
+      },
+      "10000003": {
+        "wins": 64,
+        "draws": 0,
+        "losses": 33,
+        "played": 97,
+        "mvp": 19,
+        "merda": 0,
+        "zikado": 3
+      },
+      "10000007": {
+        "wins": 38,
+        "draws": 0,
+        "losses": 43,
+        "played": 81,
+        "mvp": 6,
+        "merda": 1,
+        "zikado": 13
+      },
+      "10000008": {
+        "wins": 17,
+        "draws": 0,
+        "losses": 36,
+        "played": 53,
+        "mvp": 0,
+        "merda": 7,
+        "zikado": 29
+      },
+      "10000006": {
+        "wins": 33,
+        "draws": 0,
+        "losses": 58,
+        "played": 91,
+        "mvp": 2,
+        "merda": 6,
+        "zikado": 7
+      }
+    },
+    "titles": [
+      {
+        "title_id": "pl-ios-2023-10000007",
+        "team_id": 10000007,
+        "title": "Premier League IOS 2023"
+      },
+      {
+        "title_id": "copa-ios-2025-10000002",
+        "team_id": 10000002,
+        "title": "Copa IOS 2025"
+      },
+      {
+        "title_id": "pc-2025-1-10000002",
+        "team_id": 10000002,
+        "title": "Pontos Corridos 2025/1"
+      },
+      {
+        "title_id": "pl-ios-2024-10000001",
+        "team_id": 10000001,
+        "title": "Premier League IOS 2024"
+      },
+      {
+        "title_id": "pc-2024-10000001",
+        "team_id": 10000001,
+        "title": "Pontos Corridos 2024"
+      },
+      {
+        "title_id": "iwc-2026-10000001",
+        "team_id": 10000001,
+        "title": "IOS World Cup 2026"
+      },
+      {
+        "title_id": "pl-ios-2025-10000003",
+        "team_id": 10000003,
+        "title": "Premier League IOS 2025"
+      },
+      {
+        "title_id": "pc-2025-2-10000003",
+        "team_id": 10000003,
+        "title": "Pontos Corridos 2025/2"
+      },
+      {
+        "title_id": "icwc-2025-10000003",
+        "team_id": 10000003,
+        "title": "IOS Club World Cup 2025"
+      },
+      {
+        "title_id": "pc-2026-1-10000003",
+        "team_id": 10000003,
+        "title": "Pontos Corridos 2026/1"
+      },
+      {
+        "title_id": "copa-ios-2024-10000005",
+        "team_id": 10000005,
+        "title": "Copa IOS 2024"
+      },
+      {
+        "title_id": "copa-ios-2026-10000005",
+        "team_id": 10000005,
+        "title": "Copa IOS 2026"
+      }
+    ]
+  },
+  "season_state": {
+    "pl_totals": {
+      "10000001": 1773.43,
+      "10000010": 1178.43,
+      "10000009": 1537.99,
+      "10000005": 1629.56,
+      "10000004": 1555.81,
+      "10000002": 1618.11,
+      "10000003": 1741.43,
+      "10000007": 1766.39,
+      "10000008": 1156.93,
+      "10000006": 1232.69
+    },
+    "round_scores": {},
+    "standings": {
+      "pl-ios": [],
+      "pc1": [],
+      "pc2": []
+    },
+    "matches": {
+      "pc1": [],
+      "pc2": []
+    },
+    "awards": {
+      "mvp": {},
+      "merda": {}
+    },
+    "records": {},
+    "titles": []
+  },
+  "processed_event_ids": [],
+  "last_cartola_round": 23
+}

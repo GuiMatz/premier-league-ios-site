@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-08-13T04:55:14.350000Z",
+  "roundStatus": "final",
+  "market": {"round": 22, "statusId": 2, "isOpen": false, "season": 2026},
+  "teams": [
+    {"id":10000001,"roundPoints":77.21,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000002,"roundPoints":51.60,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000003,"roundPoints":63.01,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000004,"roundPoints":64.61,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000005,"roundPoints":76.05,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000006,"roundPoints":54.24,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000007,"roundPoints":76.36,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000008,"roundPoints":37.19,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000009,"roundPoints":49.95,"totalPoints":null,"budget":null,"lineup":null},
+    {"id":10000010,"roundPoints":57.45,"totalPoints":null,"budget":null,"lineup":null}
+  ],
+  "errors": []
+}
